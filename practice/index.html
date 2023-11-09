@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta chaset="UTF-8">
+    <title>fighting</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- script -->
+    <script src="./jquery/jquery.js"></script>
+    
+    <!-- jquery -->
+    <script>
+        $(document).ready(function(){
+            $('.open_btn').click(function(){
+                $('nav').addClass('on');
+            });
+            $('.close_btn').click(function(){
+                $('nav').removeClass('on');
+            });
+            
+            $(window).scroll(function(){
+                var win_top = $(window).scrollTop();
+                // var wrap_top = $('#wrap').offset().top;
+                if(win_top >= 300){
+                    alert
+                    $('header').addClass('resize');
+                }else {
+                    $('header').removeClass('resize'); 
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <!-- 헤더 고정하기 -->
+    <header>
+        <h1>YeJin</h1>
+        <!-- 메뉴 열기 닫기 -->
+        <button class="open_btn">사이드 메뉴 열기</button>
+        <button class="close_btn">사이드 메뉴 닫기</button>
+        <nav>
+            사이드 메뉴 ! 
+        </nav>
+    </header>
+    <main>
+        <div id="wrap">
+            <h2>lable 태그와 input 태그 연습</h2>
+            <label for="name">이름 : </label>
+            <input type="text" id="name">
+            <h2>radio 연습</h2>
+            <label>
+                <input type="radio" name="gender">
+                남성
+            </label>
+            <label>
+                <input type="radio" name="gender">
+                여성
+            </label>
+            <label style="display: block">
+                password : 
+                <input type="password" placeholder="비밀번호를 입력하세요.">
+            </label>
+        </div>
+
+
+    </main>
+</body>    
+</html>
