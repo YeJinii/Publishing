@@ -24,6 +24,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var check = false;
+
+            // menu btn
+            $('.open_menu_btn').click(function(){
+                if(!check){
+                    $('nav').addClass('on');
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').addClass('trans');
+                    check = true;
+                } else {
+                    $('nav').removeClass('on');
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').removeClass('trans');
+                    check = false;
+                }
+            });
+
+            // fade animation
+            $('#Professor').addClass('on');
+
+            $(window).scroll(function(){
+                var win_top = $(window).scrollTop();
+
+                $('#Biosketch, #ProspectiveGraduateStudents, #Teaching').each(function(){
+                    let box_top = $(this).offset().top;
+                    if(win_top >= box_top - 600){
+                        $(this).addClass('on');
+                    } else {
+                        $(this).removeClass('on');
+                    }
+                });
+                $('.teaching_inner .txt_inner .left_txt_inner div, .teaching_inner .txt_inner .right_txt_inner div').each(function(){
+                    let box_top = $(this).offset().top;
+                    if(win_top >= box_top - 600){
+                        $(this).addClass('on');
+                    } else {
+                        $(this).removeClass('on');
+                    }
+                });
+            });
+
+
+        });
+    </script>    
 </head>
 <body>
     <div id="wrap">
@@ -205,11 +252,14 @@
                                 SWS109 
                             </div>
                         </div>
+                        <!-- todo : 링크 다는 법 -->
+                        <!-- 링크 걸 텍스트를 <a href=""></a> 태그로 '감싼다'. -->
+                        <!-- href="링크 주소" 기입 -->
                         <div class="right_txt_inner">
                             <div class="t_first">
-                                <p>Digital Logic Design (Spring 2016)</p>
-                                <p>Computer Architecture (RISC-V) (Fall 2023)</p> 
-                                <p>Computer Systems Design (Spring 2023)</p>
+                                <p><a href="http://esca.korea.ac.kr/teaching/cose221_LD">Digital Logic Design </a>(Spring 2016)</p>
+                                <p><a href="http://esca.korea.ac.kr/teaching/cose222_CA/">Computer Architecture </a>(RISC-V) (Fall 2023)</p> 
+                                <p><a href="http://esca.korea.ac.kr/teaching/cose321_CSD/cose321.htm">Computer Systems Design</a> (Spring 2023)</p>
                                 <p>Embedded Systems (Spring 2015)</p>
                             </div>
                             <div class="t_second">
