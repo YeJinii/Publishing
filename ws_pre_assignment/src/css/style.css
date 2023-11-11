@@ -5,7 +5,8 @@
 h1,fieldset {margin:0; padding:0;}
 html {font-size:0.625em;}  /* 10px */
 body,h1,h2,h3,h4,h5,h6,button {
-    font-family: "SBAggroM","돋움", dotum, sans-serif;
+    font-family: 'Noto Sans KR', dotum, sans-serif;
+    font-weight: bold;
     line-height: 1;
 }
 ul,ol,li {list-style:none;}
@@ -36,6 +37,231 @@ html, body {
     height: 100%;
 }
 
-@media screen and (max-width : 767px){
+/* 375 */
+#wrap {
+    background-color: #F9F9F9;
+}
 
+main {
+    width: 83.733%; /* 314 / 375 */
+    height: 684px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 17px;
+    font-size: 3.3rem;
+}
+
+.ip_list_inner {
+    width: 100%;
+    height: 380px;
+}
+.ip_list_inner .product {
+    width: 314px;
+    height: 380px;
+    border-radius: 31px;
+    border: 1px solid #DDDDDD;
+    background-color: #FFFFFF;
+
+    margin-right: 17px;
+}
+
+.ip_list_inner .product .product_inner {
+    padding: 30px 32px 0 33px;
+    position: relative;
+}
+
+.ip_list_inner .product .product_inner > div:first-of-type {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+}
+.corporate_credit {
+    display: block;
+    float: left;
+    width: 90px;
+    height: 30px;
+    border: 1px solid #FA9B4A;
+    border-radius: 9px;
+    padding: 0 10px;
+}
+.corporate_credit > i {
+    display: block;
+    float: left;
+    width: 17px;
+    height: 17px;
+    background: url(../img/icon.png) no-repeat center/contain;
+    background-size: 16px 16px;
+
+    margin-top: 5px;
+}
+.corporate_credit > p {
+    display: block;
+    float: right;
+    font-size: 1.3rem;
+    line-height: 30px;
+    text-align: right;
+    color: #535353;
+}
+.recruitment_state {
+    float: right;
+    width: 65px;
+    height: 30px;
+
+    color: #FFFFFF;
+    border-radius: 9px; 
+
+    font-size: 1.3rem;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* state */
+.expected {
+    background-color: #F9BD23;
+}
+.progress {
+    background-color: #6284FF;
+}
+.completed {
+    background-color: #FA7300;
+}
+
+.ip_list_inner .product .product_inner > h3 {
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-size: 1.9rem;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.details {
+    width: 100%;
+    height: 57px;
+
+    color: #535353;
+}
+
+.details .rate_of_return {
+    float: left;
+    margin-right: 55px;
+
+}
+.details .rate_of_return h4 {
+    font-size: 1.5rem;
+    line-height: 21px;
+}
+.details .rate_of_return p {
+    font-size: 1.9rem;
+    line-height: 25px;
+}
+
+.details .investment_period {
+    float: left;
+}
+.details .investment_period h4 {
+    font-size: 1.5rem;
+    line-height: 21px;    
+}
+.details .investment_period p {
+    font-size: 1.9rem;
+    line-height: 25px;
+}
+
+.ip_list_inner .product .product_inner > i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #DDDEE1;
+
+    margin: 15px 0;
+}
+.ip_list_inner .product .product_inner h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+    color: #535353;
+}
+.ip_list_inner .product .product_inner > p {
+    font-size: 1.8rem;
+    line-height: 30px;
+    margin-bottom: 15px;
+
+    color: #535353;
+}
+.ip_list_inner .product .product_inner .percentage {
+    position: absolute;
+    right: 32px;
+    top: 259px;
+
+    font-size: 1.4rem;
+    color: #FA9B4A;
+}
+.ip_list_inner .product .product_inner .progress_bar {
+    display: block;
+    width: 100%;
+    height: 12px;
+
+    border-radius: 4px;
+    border: 1px solid #F0F1F1;
+    background-color: #F9F9F9;
+}
+.ip_list_inner .product .product_inner .progress_bar .progress {
+    display: block;
+    width: 70%;
+    height: 100%;
+
+    border-radius: 4px;
+    background-image: linear-gradient(90deg, #F9F9F9 , #FA9B4A); 
+}
+
+.ip_list_inner .product .product_inner .more_btn {
+    margin-top: 16px;
+    display: block;
+    width: 100%;
+    height: 39px;
+    
+    border-radius: 8px;
+    border: 1px solid #FA9B4A;
+
+    font-size: 1.4rem;
+    line-height: 30px;
+    color: #FA9B4A;
+
+    transition: transform .5s;
+}
+.ip_list_inner .product .product_inner .more_btn:hover {
+    transform: scale(1.01);
+}
+
+
+@media screen and (min-width : 768px){
+    main {
+        width: 83.984%; /* 645 / 768 */
+    }
+    h1 {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width : 1024px){
+    main {
+        width: 75%; /* 768 / 1024 */
+    }
+}
+
+@media screen and (min-width : 1280px){
+    main {
+        width: 80%; /* 1024 / 1280 */
+    }
+}
+
+@media screen and (min-width : 1700px){
+    main {
+        width: 1200px;
+    }
 }

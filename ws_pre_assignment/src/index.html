@@ -10,18 +10,45 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- font: Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
+    <!-- jquery -->
     <script src="jquery/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
+
     <script>
         $(function(){
-            // $('.ip_list_inner').slick({
-                
-            // });
+
+            $('.ip_list_inner').slick({
+                infinite: true,
+                swipeToSlide: true,
+                variableWidth: true,
+                arrows: false,
+                speed: 300,
+            });
+
+            // %에 따라 progress_bar의 width 변경
+            $('.product .product_inner .percentage').each(function(){
+                var score = $(this).text();
+
+                if(score=='-') {
+                    $(this).next().find('.progress').css('width', '0');
+                    $(this).css('color', '#535353');
+                }
+                else {
+                    $(this).next().find('.progress').css('width', score);
+                }
+            });
+
+            
         });
+        
     </script>
 
 </head>
@@ -35,20 +62,24 @@
                     2. progress : 모집중
                     3. completed : 모집완료
                 -->
-
+    
                 <!-- product_1 -->
                 <div class="product">
-                    <div class="product_inner">
-                        <span class="corporate_credit">법인신용</span>
-                        <span class="recruitment_state progress">모집중</span>
-                        <h3>물류채권 선정산 A_28차</h3>
+                    <div class="product_inner clear">
                         <div>
-                            <h4>수익률</h4>
-                            <p>8.00%</p>
+                            <span class="corporate_credit"><i></i><p>법인신용</p></span>
+                            <span class="recruitment_state progress">모집중</span>
                         </div>
-                        <div>    
-                            <h4>투자기간</h4>
-                            <p>42일</p>
+                        <h3>물류채권 선정산 A_28차</h3>
+                        <div class="details clear">
+                            <div class="rate_of_return">
+                                <h4>수익률</h4>
+                                <p>8.00%</p>
+                            </div>
+                            <div class="investment_period">    
+                                <h4>투자기간</h4>
+                                <p>42일</p>
+                            </div>
                         </div>
                         <i></i>
                         <h4>모집금액</h4>
@@ -60,20 +91,24 @@
                         <button class="more_btn">상세보기</button>
                     </div>
                 </div> <!-- e: product_1 -->
-
+    
                 <!-- product_2 -->
                 <div class="product">
                     <div class="product_inner">
-                        <span class="corporate_credit">법인신용</span>
-                        <span class="recruitment_state expected">모집예정</span>
-                        <h3>물류채권 선정산 A_28차</h3>
                         <div>
-                            <h4>수익률</h4>
-                            <p>8.00%</p>
+                            <span class="corporate_credit"><i></i><p>법인신용</p></span>
+                            <span class="recruitment_state expected">모집예정</span>
                         </div>
-                        <div>    
-                            <h4>투자기간</h4>
-                            <p>42일</p>
+                        <h3>물류채권 선정산 A_28차</h3>
+                        <div class="details clear">
+                            <div class="rate_of_return">
+                                <h4>수익률</h4>
+                                <p>8.00%</p>
+                            </div>
+                            <div class="investment_period">    
+                                <h4>투자기간</h4>
+                                <p>42일</p>
+                            </div>
                         </div>
                         <i></i>
                         <h4>모집금액</h4>
@@ -85,20 +120,24 @@
                         <button class="more_btn">상세보기</button>
                     </div>
                 </div> <!-- e: product_2 -->
-
+    
                 <!-- product_3 -->
                 <div class="product">
                     <div class="product_inner">
-                        <span class="corporate_credit">법인신용</span>
-                        <span class="recruitment_state completed">모집 완료</span>
-                        <h3>물류채권 선정산 A_28차</h3>
                         <div>
-                            <h4>수익률</h4>
-                            <p>8.00%</p>
+                            <span class="corporate_credit"><i></i><p>법인신용</p></span>
+                            <span class="recruitment_state completed">모집완료</span>
                         </div>
-                        <div>    
-                            <h4>투자기간</h4>
-                            <p>42일</p>
+                        <h3>물류채권 선정산 A_28차</h3>
+                        <div class="details clear">
+                            <div class="rate_of_return">
+                                <h4>수익률</h4>
+                                <p>8.00%</p>
+                            </div>
+                            <div class="investment_period">    
+                                <h4>투자기간</h4>
+                                <p>42일</p>
+                            </div>
                         </div>
                         <i></i>
                         <h4>모집금액</h4>
@@ -110,7 +149,7 @@
                         <button class="more_btn">상세보기</button>
                     </div>
                 </div> <!-- e: product_3 -->                  
-
+    
             </div> <!-- // e: ip_list_inner -->
         </main>
 
