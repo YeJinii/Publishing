@@ -121,6 +121,7 @@ header {
 .open_menu_btn span:nth-child(3).trans {
     transform: translateY(-9px) rotate(-45deg);
 }
+
 nav {
     display: none;
     position: fixed;
@@ -540,35 +541,72 @@ footer {
         overflow: hidden;
         text-indent: -9999px;
         float: right;
-        margin-top: 28px;
+        margin-top: 25px;
+        transition: all .3s;
+        opacity: 0.95;
     }
     .open_menu_btn span {
         display: block;
-        width: 50px;
-        height: 8px;
-        background-color: #3d3d3d;
+        width: 45px;
+        height: 6px;
+        background-color: #ED702D;
         margin-bottom: 10px;
     }
     .open_menu_btn span:last-child {
         margin-bottom: 0;
     }
-    .open_menu_btn:hover span {
-        background-color: #ED702D;
+    .open_menu_btn:hover {
+        opacity: 1;
+        transform: scale(1.02);
     }
     
+    .open_menu_btn span:nth-child(1).trans {
+        transform: translateY(16px) rotate(45deg);
+    }
+    .open_menu_btn span:nth-child(2).trans {
+        opacity: 0;
+    }
+    .open_menu_btn span:nth-child(3).trans {
+        transform: translateY(-16px) rotate(-45deg);
+    }
+
     nav {
         display: none;
+        position: fixed;
+        background-color: #ffffff;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    nav.on {
+        display: block;
     }
     nav h2 {}
-    nav > div {}
-    nav > div > a {}
-    nav > div > a > span {}
-    nav > div > a > h1 {}
-    nav > div > a > h2 {}
-    nav > div button {}
-    nav ul {}
-    nav ul li {}
-    nav ul li a {}
+    nav button {
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul li {
+        height: 80px;
+    }
+    nav ul li:hover {
+        background-color: #efefef;
+    }
+    nav ul li a {
+        line-height: 80px;
+        font-size: 2.6rem;
+        color: #4D4D4D;
+    }
+    nav ul li a:hover, 
+    nav ul li a:focus {
+        color: #ED702D;
+    }
     
     main {}
     #Professor {
@@ -948,20 +986,54 @@ footer {
     .open_menu_btn:hover span {
         background-color: #ED702D;
     }
+
+    .open_menu_btn span:nth-child(1).trans {
+        transform: translateY(16px) rotate(45deg);
+    }
+    .open_menu_btn span:nth-child(2).trans {
+        opacity: 0;
+    }
+    .open_menu_btn span:nth-child(3).trans {
+        transform: translateY(-16px) rotate(-45deg);
+    }
     
     nav {
         display: none;
+        position: fixed;
+        background-color: #ffffff;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    nav.on {
+        display: block;
     }
     nav h2 {}
-    nav > div {}
-    nav > div > a {}
-    nav > div > a > span {}
-    nav > div > a > h1 {}
-    nav > div > a > h2 {}
-    nav > div button {}
-    nav ul {}
-    nav ul li {}
-    nav ul li a {}
+    nav button {
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul li {
+        height: 80px;
+    }
+    nav ul li:hover {
+        background-color: #efefef;
+    }
+    nav ul li a {
+        line-height: 80px;
+        font-size: 2.5rem;
+        color: #4D4D4D;
+    }
+    nav ul li a:hover, 
+    nav ul li a:focus {
+        color: #ED702D;
+    }
     
     main {}
     #Professor {
@@ -1338,6 +1410,9 @@ footer {
     /* hi nav */
     nav {
         display: block;
+        position: static;
+        width: auto;
+        height: auto;
     }
     nav h2 {}
     nav button {

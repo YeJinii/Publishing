@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윙크스톤 투자상품 리스트</title>
+    <link rel="icon" href="./img/favicon.ico">
+
+    <!-- css -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script>
+        $(function(){
+            // $('.ip_list_inner').slick({
+                
+            // });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="wrap">
+        <main>
+            <h1>윙크스톤 투자 상품</h1>
+            <div class="ip_list_inner">
+                <!-- state : 
+                    1. expected : 모집예정   
+                    2. progress : 모집중
+                    3. completed : 모집완료
+                -->
+
+                <!-- product_1 -->
+                <div class="product">
+                    <div class="product_inner">
+                        <span class="corporate_credit">법인신용</span>
+                        <span class="recruitment_state progress">모집중</span>
+                        <h3>물류채권 선정산 A_28차</h3>
+                        <div>
+                            <h4>수익률</h4>
+                            <p>8.00%</p>
+                        </div>
+                        <div>    
+                            <h4>투자기간</h4>
+                            <p>42일</p>
+                        </div>
+                        <i></i>
+                        <h4>모집금액</h4>
+                        <p>150,491,000원</p>
+                        <span class="percentage">70%</span>
+                        <span class="progress_bar">
+                            <span class="progress"></span>
+                        </span>
+                        <button class="more_btn">상세보기</button>
+                    </div>
+                </div> <!-- e: product_1 -->
+
+                <!-- product_2 -->
+                <div class="product">
+                    <div class="product_inner">
+                        <span class="corporate_credit">법인신용</span>
+                        <span class="recruitment_state expected">모집예정</span>
+                        <h3>물류채권 선정산 A_28차</h3>
+                        <div>
+                            <h4>수익률</h4>
+                            <p>8.00%</p>
+                        </div>
+                        <div>    
+                            <h4>투자기간</h4>
+                            <p>42일</p>
+                        </div>
+                        <i></i>
+                        <h4>모집금액</h4>
+                        <p>150,491,000원</p>
+                        <span class="percentage">-</span>
+                        <span class="progress_bar">
+                            <span class="progress"></span>
+                        </span>
+                        <button class="more_btn">상세보기</button>
+                    </div>
+                </div> <!-- e: product_2 -->
+
+                <!-- product_3 -->
+                <div class="product">
+                    <div class="product_inner">
+                        <span class="corporate_credit">법인신용</span>
+                        <span class="recruitment_state completed">모집 완료</span>
+                        <h3>물류채권 선정산 A_28차</h3>
+                        <div>
+                            <h4>수익률</h4>
+                            <p>8.00%</p>
+                        </div>
+                        <div>    
+                            <h4>투자기간</h4>
+                            <p>42일</p>
+                        </div>
+                        <i></i>
+                        <h4>모집금액</h4>
+                        <p>150,491,000원</p>
+                        <span class="percentage">100%</span>
+                        <span class="progress_bar">
+                            <span class="progress"></span>
+                        </span>
+                        <button class="more_btn">상세보기</button>
+                    </div>
+                </div> <!-- e: product_3 -->                  
+
+            </div> <!-- // e: ip_list_inner -->
+        </main>
+
+    </div>
+</body>
+</html>
