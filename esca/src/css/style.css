@@ -1,13 +1,13 @@
 @charset "utf-8";
 
 @keyframes fade {
-    from {opacity: 0;}
+    from {opacity: .5;}
 }
 
 @keyframes bottom {
     from {
         transform: translateY(5%);
-        opacity: 0;
+        opacity: .5;
     }
 }
 
@@ -163,7 +163,7 @@ nav ul li a:focus {
 main {}
 #Professor {
     margin-top: 130px;
-    opacity: 0;
+    /* opacity: .5; */
 }
 #Professor.on {
     animation: fade 2s;
@@ -343,7 +343,7 @@ main {}
 
 #Biosketch {
     padding: 50px 0;
-    opacity: 0;
+    /* opacity: .5; */
 }
 #Biosketch.on {
     animation: bottom 1s backwards;
@@ -358,7 +358,7 @@ main {}
 .bio_inner p {}
 
 #ProspectiveGraduateStudents {
-    opacity: 0;
+    /* opacity: .5; */
 }
 #ProspectiveGraduateStudents.on {
     animation: bottom 1s backwards;
@@ -374,7 +374,7 @@ main {}
 
 #Teaching {
     width: 100%;
-    opacity: 0;
+    /* opacity: .5; */
 }
 #Teaching.on {
     transition: bottom 1s backwards;
@@ -408,7 +408,7 @@ main {}
     margin-right: 14px;
 }
 .teaching_inner .txt_inner .left_txt_inner div {
-    opacity: 0;
+    /* opacity: .5; */
     margin-bottom: 30px;
 }
 .teaching_inner .txt_inner .left_txt_inner div.on {
@@ -425,7 +425,7 @@ main {}
 }
 .teaching_inner .txt_inner .right_txt_inner div {
     margin-bottom: 30px;
-    opacity: 0;
+    /* opacity: .5; */
 }
 .teaching_inner .txt_inner .right_txt_inner div.on {
     opacity: 1;
@@ -934,7 +934,6 @@ footer {
         background-color: rgba(255, 255, 255, .9);
         box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
     }
-    /* cwh */
     #header_inner {
         width: 80.078%; /* 820 / 1024 */
         margin: 0 auto;
@@ -1040,7 +1039,6 @@ footer {
         margin-top: 180px;
         height: 514px;
     }
-    /* cwh */
     .prof_inner {
         width: 80.078%; /* 820 / 1024 */
         margin: 0 auto;
@@ -1226,7 +1224,6 @@ footer {
         padding: 0;
         padding-bottom: 80px;
     }
-    /* cwh */
     .bio_inner {
         width: 80.078%; /* 820 / 1024 */
         margin: 0 auto;
@@ -1236,7 +1233,6 @@ footer {
     .bio_inner p {}
     
     #ProspectiveGraduateStudents {}
-    /* cwh */
     .pgs_inner {
         width: 80.078%; /* 820 / 1024 */
         margin: 0 auto;
@@ -1248,7 +1244,6 @@ footer {
     #Teaching {
         width: 100%;
     }
-    /* cwh */
     .teaching_inner {
         width: 80.078%; /* 820 / 1024 */
         margin: 0 auto;
@@ -1371,7 +1366,6 @@ footer {
         background-color: rgba(255, 255, 255, .9);
         box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
     }
-    /* cwh */
     #header_inner {
         width: 80%; /* 1024 / 1280 */
         margin: 0 auto;
@@ -1427,12 +1421,15 @@ footer {
         font-size: 1.8rem;
         line-height: 100px;
         margin-left: 30px;
-        opacity: 0.8;
+        opacity: 0.9;
         transition: all .3s;
+
+        height: auto;
     }
     nav ul li:hover {
         transform: scale(1.05);
         opacity: 1;
+        background-color: transparent;
     }
     nav ul li a {
         color: #4d4d4d;
@@ -1449,7 +1446,6 @@ footer {
         margin-top: 180px;
         height: 514px;
     }
-    /* cwh */
     .prof_inner {
         width: 80%; /* 1024 / 1280 */
         margin: 0 auto;
@@ -1623,7 +1619,6 @@ footer {
         padding: 0;
         padding-bottom: 80px;
     }
-    /* cwh */
     .bio_inner {
         width: 80%; /* 1024 / 1280 */
         margin: 0 auto;
@@ -1633,7 +1628,6 @@ footer {
     .bio_inner p {}
     
     #ProspectiveGraduateStudents {}
-    /* cwh */
     .pgs_inner {
         width: 80%; /* 1024 / 1280 */
         margin: 0 auto;
@@ -1645,7 +1639,6 @@ footer {
     #Teaching {
         width: 100%;
     }
-    /* cwh */
     .teaching_inner {
         width: 80%; /* 1024 / 1280 */
         margin: 0 auto;
@@ -1769,7 +1762,6 @@ footer {
         background-color: rgba(255, 255, 255, .9);
         box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
     }
-    /* cwh */
     #header_inner {
         width: 1140px;
         margin: 0 auto;
@@ -1838,7 +1830,6 @@ footer {
         margin-top: 200px;
         height: 621px;
     }
-    /* cwh */
     .prof_inner {
         width: 1140px;
         margin: 0 auto;
@@ -2013,7 +2004,6 @@ footer {
         padding: 0;
         padding-bottom: 100px;
     }
-    /* cwh */
     .bio_inner {
         width: 1140px;
         margin: 0 auto;
@@ -2023,7 +2013,6 @@ footer {
     .bio_inner p {}
     
     #ProspectiveGraduateStudents {}
-    /* cwh */
     .pgs_inner {
         width: 1140px;
         margin: 0 auto;
@@ -2035,7 +2024,6 @@ footer {
     #Teaching {
         width: 100%;
     }
-    /* cwh */
     .teaching_inner {
         width: 1140px;
         margin: 0 auto;
