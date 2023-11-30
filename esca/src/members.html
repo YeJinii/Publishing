@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCA의 멤버를 소개합니다</title>
+    <link rel="icon" href="./img/favicon_io/favicon.ico">
+
+    <!-- css -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/members.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            var check = false;
+
+            // menu btn
+            $('.open_menu_btn').click(function(){
+                if(!check){
+                    $('nav').addClass('on');
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').addClass('trans');
+                    check = true;
+                } else {
+                    $('nav').removeClass('on');
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').removeClass('trans');
+                    check = false;
+                }
+            });
+        });
+    </script> 
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="header_inner" class="clear">
+                <a href="#" class="clear">
+                    <span></span>
+                    <h1>ESCA</h1>
+                    <h2>Embedded Systems</br>& Computer Labs</h2>
+                </a>
+                <button class="open_menu_btn mobile">
+                    <span>메뉴열기</span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="clear">
+                    <h2 class="blind">주메뉴 영역</h2>
+                    <button class="close_menu_btn">메뉴 닫기</button>
+                    <ul class="clear">
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./member.html">
+                                Members
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Research
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Teaching">
+                                Teaching
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Publication
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- e: header inner -->
+        </header>
+        <div id="members_wrap">
+            <div class="members_banner">
+                <span class="banner_filter">
+                    <h3>Members</h3>
+                    <span>ESCA Labs</span>
+                    <i></i>
+                    <ul>
+                        <li>
+                            <a href="#m_professor">Professor</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#">PhD Students</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#">Master Students</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#">Alumni</a>
+                            <span></span>
+                        </li>
+                    </ul>
+                </span>
+            </div> <!-- e: members_banner -->
+            <div id="m_professor">
+                <div class="section_title">
+                    <span></span>
+                    <h4>Professor</h4>
+                </div>
+                <span class="img">서태원 교수 사진</span>
+                <h5>Taeweon Suh</h5>
+                <span>Professor</span>
+
+                <div class="prof_info">
+                    <div>
+                        <p><span>Office. </span>320 Aegineung Cafeteria (애기능 생활관 320)</p>
+                    </div>
+                    <div>
+                        <p><span>Address. </span>145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841</p>
+                    </div>
+                    <div>
+                        <p><span>Phone. </span>+82-2-3290-2397</p>
+                    </div>
+                    <div>
+                        <p><span>Email. </span>suhtw at korea . ac . kr</p>
+                    </div>
+                </div>
+
+                <div class="biosketch">
+                    <div class="title">
+                        <span></span>
+                        <h5>Bioscketch</h5>
+                    </div>
+                    <p> Taeweon Suh is a Professor in the Department of Computer Science & Engineering at Korea University. He received his PhD degree in Electrical and Computer Engineering from Georgia Institute of Technology. His main research interests include embedded systems (including IoTs), computer architecture, multi- & many-core, parallel programming, hardware security, and virtualization. Prior to joining academia, he was a systems engineer at Intel Corporation in Hillsboro, Oregon in US.</p>
+                </div>
+            </div> <!-- e: m_professor -->
+        </div> <!-- e: members_wrap -->
+        <footer>
+            <div class="footer_inner_mobile">
+                <div class="clear">
+                    <span>고려대학교 로고</span>
+                    <div class="txt_inner">
+                        <span>Address.</span>&nbsp;145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841</br>
+                        <span>Office.</span>&nbsp;320 Aegineung Cafeteria (애기능 생활관 320)</br>
+                        <span>Phone.</span>&nbsp;+82-2-3290-2397 &nbsp;&nbsp;&nbsp;
+                        <span>Email.</span> suhtw@korea.ac.kr
+                    </div>
+                </div>
+                <i></i>
+                <span>
+                    Copyright ⓒ 2023 Embedded Systems & Computer Labs All Rights Reserved
+                </span>
+            </div>
+            <div class="footer_inner">
+                <span>고려대학교 로고</span>
+                <div class="txt_inner clear">
+                    <div>
+                        <p>
+                            <span>Address & Office.</span> 145 Anam-Ro Seongbuk-Gu, Seoul, Korea, 02841 / 320 Aegineung Cafeteria (애기능 생활관 320)
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>Phone.</span> +82-2-3290-2397 &nbsp;&nbsp;&nbsp;<span>Email.</span>&nbsp;suhtw@korea.ac.kr
+                        </p>
+                    </div>
+                    <i></i>
+                    <span>
+                        Copyright ⓒ 2023 ESCA Labs All Rights Reserved. Designed by yejin
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </div> <!-- e: wrap -->
+</body>
+</html>

@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+#members_wrap {}
+.members_banner {
+    margin-top: 80px;
+    width: 100%;
+    height: 363px;
+    background: url(../img/members/members_bg.jpg) no-repeat center/cover;
+
+    text-align: center;
+}
+.banner_filter {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    padding-top: 115px;
+}
+.banner_filter h3 {
+    font-size: 4.5rem;
+    line-height: 52px;
+    color: #fff;
+
+    margin-bottom: 10px;
+}
+.banner_filter span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 26px;
+    color: rgba(255, 255, 255, .7);
+
+    margin-bottom: 103px;
+}
+.banner_filter i {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, .2);
+}
+.banner_filter ul {
+    width: 82.667%; /* 310 / 375 */
+    margin: 0 auto;
+}
+.banner_filter ul li {
+    float: left;
+    width: auto;
+    height: 56px;
+
+    margin-right: 23px;
+    padding-top: 20px;
+
+    position: relative;
+}
+.banner_filter ul li:last-child {
+    margin: 0;
+}
+.banner_filter ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: 0.8;
+
+    transition: all .5s;
+}
+.banner_filter ul li span {
+    position: absolute;
+    top: 48px;
+
+    display: block;
+    width: 100%;
+    height: 8px;
+
+    background: url(../img/members/tri_p.png) no-repeat center/contain;
+    background-size: 10px 8px;
+
+    opacity: 0;
+
+    transition: all .5s;
+}
+
+.banner_filter ul li:hover a {
+    opacity: 1;
+}
+.banner_filter ul li:hover span {
+    opacity: 1;
+}
+
+#m_professor {}
+#m_professor .section_title {
+    width: 100%;
+    height: 60px;
+    background-color: #f8f8f8;
+    padding: 33px 8.6665% 0;
+}
+#m_professor .section_title > span {
+    display: block;
+    float: left;
+    width: 5px;
+    height: 27px;
+    background-color: #ED702D;
+
+    margin-right: 10px;
+}
+#m_professor .section_title > h4 {
+    float: left;
+    font-size: 2.5rem;
+}
+
+#m_professor .img {
+    display: block;
+    margin: 50px auto 10px;
+    width: 150px;
+    height: 180px;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.17);
+
+    text-indent: -9999px;
+    overflow: hidden;
+
+    background: url(../img/members/people/prof.Suh.jpg) no-repeat center/cover;
+}
+#m_professor > h5 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 40px;
+}
+#m_professor > span {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #B9B9B9;
+}
+
+.prof_info {
+    width: 82.667%; /* 310 / 375 */
+    margin: 20px auto 0;
+
+    color: #333333;
+}
+.prof_info > div {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.prof_info > div:last-of-type {
+    margin-bottom: 0px;
+}
+.prof_info > div p {
+    font-size: 1.2rem;
+}
+.prof_info > div p span {
+    font-weight: bold;
+}
+
+#m_professor .biosketch {
+    width: 82.667%; /* 310 / 375 */
+    margin: 50px auto;
+
+    text-align: left;
+}
+#m_professor .biosketch .title {
+    height: 27px;
+    margin-bottom: 20px;
+}
+#m_professor .biosketch .title > span {
+    display: block;
+    float: left;
+    width: 8px;
+    height: 8px;
+
+    margin-top: 9px;
+    margin-right: 10px;
+    background-color: #ED702D;
+}
+#m_professor .biosketch .title > h5 {
+    display: block;
+    float: left;
+    font-size: 2.5rem;
+    line-height: 27px;
+}
+#m_professor .biosketch p {
+    margin-left: 10px;
+    width: calc(100% - 20px);
+    font-size: 1.2rem;
+    line-height: 15px;
+
+    color: #333333;
+}
