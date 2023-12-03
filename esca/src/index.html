@@ -43,32 +43,6 @@
                     check = false;
                 }
             });
-
-            // fade animation
-            $('#Professor').addClass('on');
-
-            $(window).scroll(function(){
-                var win_top = $(window).scrollTop();
-
-                $('#Biosketch, #ProspectiveGraduateStudents, #Teaching').each(function(){
-                    let box_top = $(this).offset().top;
-                    if(win_top >= box_top - 600){
-                        $(this).addClass('on');
-                    } else {
-                        $(this).removeClass('on');
-                    }
-                });
-                $('.teaching_inner .txt_inner .left_txt_inner div, .teaching_inner .txt_inner .right_txt_inner div').each(function(){
-                    let box_top = $(this).offset().top;
-                    if(win_top >= box_top - 800){
-                        $(this).addClass('on');
-                    } else {
-                        $(this).removeClass('on');
-                    }
-                });
-            });
-
-
         });
     </script>    
 </head>
@@ -79,9 +53,9 @@
                 <a href="#" class="clear">
                     <span></span>
                     <h1>ESCA</h1>
-                    <h2>Embedded Systems</br>& Computer Labs</h2>
+                    <h2>Embedded Systems & </br>Computer Architecture</h2>
                 </a>
-                <button class="open_menu_btn mobile">
+                <button class="open_menu_btn mb">
                     <span>메뉴열기</span>
                     <span></span>
                     <span></span>
@@ -91,12 +65,12 @@
                     <button class="close_menu_btn">메뉴 닫기</button>
                     <ul class="clear">
                         <li>
-                            <a href="#">
+                            <a href="./index.html">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="./member.html">
+                            <a href="./members.html">
                                 Members
                             </a>
                         </li>
@@ -317,7 +291,7 @@
                 </div>
                 <i></i>
                 <span>
-                    Copyright ⓒ 2023 Embedded Systems & Computer Labs All Rights Reserved
+                    Copyright ⓒ 2023 ESCA All Rights Reserved. Designed by YeJin.
                 </span>
             </div>
             <div class="footer_inner">
