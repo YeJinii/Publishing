@@ -1754,8 +1754,6 @@ footer {
     .mb {display: none;}
     .pc {display: block;}
 
-    /* link href로 이동시 fixed 때매 가려지는 issue */
-
     #wrap {}
     header {
         display: block;

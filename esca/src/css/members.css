@@ -411,6 +411,14 @@
 
 .desk_v { display: none; }
 
+/* link href로 이동시 fixed 때매 가려지는 issue */
+#m_pr::before, #m_phd::before, #m_m::before, #m_a::before {
+    content: "";
+    display: block;
+    margin: -80px 0 0;
+    height: 80px;
+}
+
 /* Postdoctoral Researcher */
 #m_pr {
     text-align: center;
@@ -576,6 +584,15 @@
 
 /* start tablet 768 */
 @media all and (min-width: 768px) {
+
+    /* link href로 이동시 fixed 때매 가려지는 issue */
+    #m_pr::before, #m_phd::before, #m_m::before, #m_a::before {
+        content: "";
+        display: block;
+        margin: -100px 0 0;
+        height: 100px;
+    }
+
     #members_wrap {}
     .members_banner {
         margin-top: 100px;
@@ -1021,6 +1038,15 @@
     
     .mobile { display: none; }
     .desk_v { display: block; }
+
+    /* link href로 이동시 fixed 때매 가려지는 issue */
+    #d_pr::before, #d_phd::before, #d_m::before, #d_a::before {
+        content: "";
+        display: block;
+        margin: -100px 0 0;
+        height: 100px;
+    }
+
     .desk_v .person {
         width: 79.948%; /* 614 / 768 */
         height: 250px;
@@ -1257,6 +1283,8 @@
 
 /* start tablet 1024 */
 @media all and (min-width: 1024px) {
+
+
     .banner_filter ul {
         /* toset: */
         width: 80.078%; /* 820 / 1024 */
