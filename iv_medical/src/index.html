@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)인터벤션메디칼</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./img/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- font: Merriweather -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- font: Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- slick slider -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- 카카오 지도 script -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+    <script>
+        
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var youtubePlayer_1;
+        var youtubePlayer_2;
+
+        function onYouTubeIframeAPIReady() {
+            youtubePlayer_1 = new YT.Player('player_1', {
+                playerVars:{
+                    rel:0 //관련영상 표시하지 않기.
+                },
+            });
+            youtubePlayer_2 = new YT.Player('player_2', {
+                playerVars:{
+                    rel:0 //관련영상 표시하지 않기.
+                },
+            });
+        }
+
+        function playVideo() {
+            youtubePlayer_1.playVideo();//재생
+            youtubePlayer_2.playVideo();//재생
+        }
+
+        function pauseVideo() {
+            youtubePlayer_1.pauseVideo();// 일시정지
+            youtubePlayer_2.pauseVideo();// 일시정지
+        }
+
+        let check_1 = true;
+        let check_2 = true;
+        let check_3 = true;
+        let check_4 = true;
+        let is_mb = true;
+
+        
+        $(document).ready(function(){ 
+
+            
+            // header hover event -> white mode on
+            $('header').hover(function(){
+                if(open_menu_btn) {
+                    // when mouse over
+                    $('header').removeClass('on');
+                }
+                $('header').addClass('on');
+            },function(){
+                // when mouse out
+                if(is_mb){
+                    $('header').removeClass('on');
+                }
+            });
+
+            // menu btn
+            let open_menu_btn = true;
+            $('.open_menu_btn').click(function(){
+                if(open_menu_btn){
+
+                    $('#menu').addClass('on');
+                    $('header').removeClass('on');
+                    $('header').addClass('menu_on');
+
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').addClass('trans');
+                    
+                    open_menu_btn = false;
+
+                } else {
+
+                    $('#menu').removeClass('on');
+                    $('header').removeClass('menu_on');
+                    
+                    if(is_mb){
+                        $('header').removeClass('on');
+                    } else {
+                        $('header').addClass('on');
+                    }
+
+                    $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').removeClass('trans');
+                    
+                    open_menu_btn = true;
+
+                }
+            });
+
+            // when menu list click -> move to target section
+            $('.menu_btn').click(function(){
+                $('#menu').removeClass('on');
+                
+                $('header').removeClass('menu_on');
+                $('header').addClass('on');
+                
+                $('.open_menu_btn span:nth-child(1), .open_menu_btn span:nth-child(2), .open_menu_btn span:nth-child(3)').removeClass('trans');
+            });
+
+            // main_banner slick-slide
+            $('.slider').slick({
+                dots: true,
+                dotsClass : "slick-dots",
+                arrows: false,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 5000
+            });
+
+            // partners_logo slider 
+            $('.p_logo_slider').slick({
+                slidesToShow: 7,
+                infinite: true,
+                dots: false,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed : 2000,
+                responsive: [
+                    {
+                        breakpoint: 1920,
+                        settings: {
+                            slidesToShow: 6
+                        }
+                    },
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                            slidesToShow: 5
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                ]
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header_inner">
+                <a href="#"></a>
+                <button class="open_menu_btn mobile">
+                    <span>메뉴열기</span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div id="menu" class="mobile">
+                    <ul>
+                        <li>
+                            <a href="#" class="menu_btn">Products</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_btn">Partners</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu_btn">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="desktop">
+                    <ul>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Partners</a>
+                        </li>
+                        <li>
+                            <a href="#">Product</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- e: header_inner -->
+        </header>
+        <main>
+            <div id="main_banner" class="mb_height" >
+                <div class="slider mb_height" >
+                    <div class="slide banner_1 mb_height" >
+                        <div class="content_wrap">
+                            <h2>Intervention Medical</h2>
+                            <span>(주)인터벤션메디칼</span>
+                        </div> <!-- e: content_wrap -->
+                    </div> <!-- e: slide banner_1 -->
+                    <div class="slide banner_2 mb_height" >
+                        <div class="content_wrap">
+                            <h2>Intervention Medical</h2>
+                            <span>(주)인터벤션메디칼</span>
+                        </div> <!-- e: content_wrap -->
+                    </div>
+                    <div class="slide banner_3 mb_height" >
+                        <div class="content_wrap">
+                            <h2>Intervention Medical</h2>
+                            <span>(주)인터벤션메디칼</span>
+                        </div> <!-- e: content_wrap -->
+                    </div>
+                </div>
+                <a href="#" class="scroll_down_btn desktop"></a>
+            </div> <!-- e: main_banner -->
+        </main>
+    </div>
+</body>
+</html>
